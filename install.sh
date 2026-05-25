@@ -26,7 +26,7 @@ echo "=> Set up SELinux Context"
 sudo semanage fcontext -a -t bin_t -s system_u "/opt/piavpn/bin/.*"
 sudo semanage fcontext -a -t lib_t -s system_u "/opt/piavpn/lib/.*"
 
-if not command -v patch >/dev/null 2>&1
+if ! command -v patch >/dev/null 2>&1
 then
 	echo "=> Install patch utility from Homebrew"
 	brew install gpatch
