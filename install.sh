@@ -16,7 +16,7 @@ INSTALLER_TMP="$2"
 if test -e "$INSTALLER_TMP"
 then
 	echo "=> Removing previous installer files"
-	rm -rf "$PIA_INSTALLER"
+	rm -rf "$INSTALLER_TMP"
 fi
 
 echo "=> Extracting PIA"
@@ -26,7 +26,7 @@ echo "=> Set up SELinux Context"
 sudo semanage fcontext -a -t bin_t -s system_u "/opt/piavpn/bin/.*"
 sudo semanage fcontext -a -t lib_t -s system_u "/opt/piavpn/lib/.*"
 
-if not command -v patch 2>&1 >/dev/null
+if not command -v patch >/dev/null 2>&1
 then
 	echo "=> Install patch utility from Homebrew"
 	brew install gpatch

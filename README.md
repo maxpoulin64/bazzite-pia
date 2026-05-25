@@ -7,7 +7,7 @@ This downloads and patches the official Private Internet Access installer so tha
 This will install the current version of PIA at the time of this writing, end to end.
 
 ```sh
-curl https://raw.githubusercontent.com/maxpoulin64/bazzite-pia/refs/heads/main/curl.pipe.sh | bash
+curl https://raw.githubusercontent.com/maxpoulin64/bazzite-pia/refs/heads/main/curl.pipe.sh | sh
 ```
 
 ## Normal Installation
